@@ -96,12 +96,17 @@ void exam::exam_prompt(void)
             else
                 info();
         }
-        else if (input == "new_ex")
+        else if (input == "skip")
         {
             change_ex();
             using_cheatcode++;
         }
-        else if (input == "force_success")
+        else if (input == "back")
+        {
+            using_cheatcode++;
+            force_downgrade(1);
+        }
+        else if (input == "next")
         {
             using_cheatcode++;
             success_ex(1);
