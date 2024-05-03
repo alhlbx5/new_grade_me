@@ -5,29 +5,35 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/06/20 02:26:11 by jcluzet           #+#    #+#              #
-#    Updated: 2022/11/24 00:58:44 by jcluzet          ###   ########.fr        #
+#    Created: 2022/11/07 09:41:03 by pandalaf          #+#    #+#              #
+#    Updated: 2022/12/14 17:52:08 by jcluzet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FILE='ft_putstr.c'
-ASSIGN='ft_putstr'
+FILE='rev_wstr.c'
+ASSIGN='rev_wstr'
 
-bash .system/auto_correc_main.sh $FILE $ASSIGN "Hello World!"
-if [ -e .system/grading/traceback ];then
-    mv .system/grading/traceback .
+bash .system/auto_correc_program.sh $FILE $ASSIGN "order in us put"
+if [ -e ./.system/grading/traceback ];then
+	mv .system/grading/traceback .
 	exit 1
 fi
 
-bash .system/auto_correc_main.sh $FILE $ASSIGN "Testinnnnng your puuuuuutstr!! :)"
-if [ -e .system/grading/traceback ];then
-    mv .system/grading/traceback .
+bash .system/auto_correc_program.sh $FILE $ASSIGN "done! well it, did You"
+if [ -e ./.system/grading/traceback ];then
+	mv .system/grading/traceback .
 	exit 1
 fi
 
-bash .system/auto_correc_main.sh $FILE $ASSIGN
-if [ -e .system/grading/traceback ];then
-    mv .system/grading/traceback .
+bash .system/auto_correc_program.sh $FILE $ASSIGN "You hate people! But I love gatherings. Isn't it ironic?"
+if [ -e ./.system/grading/traceback ];then
+	mv .system/grading/traceback .
+	exit 1
+fi
+
+bash .system/auto_correc_program.sh $FILE $ASSIGN "abcdefghijklm"
+if [ -e ./.system/grading/traceback ];then
+	mv .system/grading/traceback .
 	exit 1
 fi
 

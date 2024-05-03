@@ -220,7 +220,8 @@ void exam::grade_request(bool i)
 
     if (file_exists(".system/grading/passed"))
     {
-        success_ex(0);
+        // success_ex(0);
+         change_ex();
     }
     else
     {
